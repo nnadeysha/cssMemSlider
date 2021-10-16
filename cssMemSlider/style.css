@@ -6,86 +6,91 @@ body {
     font-weight: 400;
     font-size: 16px;
 }
-main {
-    margin: 0 auto;
-}
+
 .slider {
     margin: 0 auto;
     display: flex;
-    position: relative;
-    align-items: center;
     flex-direction: column;
-    width: 80vw;
-    
+    position: relative;
+    top: 1vh;
+    width: 100vw;
+    height: 85vh;
+    overflow: hidden;
+    border: 1px solid #fff;
     
 }
 .slides {
-    height: 85vh;
-    overflow: hidden;
+    width:70%;
+    display: flex;
+    flex-direction: column;
+    
 }
 .sign {
     display: flex;
     flex-direction: column;
-    
+}
 
+figure {
+    position: relative;
+    top: -10vh;
+    left: -2.55vw;
+    z-index: 1;
+    transition: all .6s ease;
+
+}
+.sign {
+    width: 25%;
 }
 .sign p img {
     width: 100%;
     margin: 0 auto;
+    height: 80vh;
+}
+input {
+    position: relative;
+    visibility: hidden;
+    bottom: -50vh;
+    right: -50vw;
 }
 .bullets {
-    display: flex;
     position: relative;
-    top: -7vh;
-    left: 22.5vw;
+    display: flex;
+    bottom: 600%;
+    left: 60.1vw;
+    z-index: 10;
+    padding-bottom: 10px;
 }
-.bullets a {
-    display: block;
-    padding: 0.5rem;
-    border-radius: 50%;
-    color: #fff;
-    transition: color 0.4s ease-in-out;
-}
-
-.bullets a i {
-    display: block;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    background-color: transparent;
-}
-
-.bullets a+a i {
-    background-color: #fff;
-}
-.bullets a:hover {
-    color: #fff;
-}
-.bullets a:active {
+.bullet {
+    width: 1rem;
+    height: 1rem;
     color: #000;
+    margin: 0.1vw;
+    display: block;
+    padding:  1rem 0.1rem;
+    cursor: pointer;
+    transition: all .5s ease;
 }
-body>i:target ~.slider>.bullets>a>i {
-    background-color: #fff;
+.bullet:hover {
+    color: tomato;
+    opacity: 0.8;
+    transform: scale(0.9);
 }
-#meme1:target ~.slider>.bullets>a:nth-child(1)>i {
-    background-color: transparent;
+#slide-1:checked ~ .bullet{
+    color: #fff;
+    border: 1px solid #fff;
+ 
 }
-#meme2:target ~.slider>.bullets>a:nth-child(2)>i {
-    background-color: transparent;
+
+
+ #slide-1:checked ~ .mem-1{
+    transform: translateY(0%);
 }
-#meme3:target ~.slider>.bullets>a:nth-child(3)>i {
-    background-color: transparent;
+#slide-2:checked ~ .mem-2 {
+    transform: translateY(-100%);
 }
-#meme4:target ~.slider>.bullets>a:nth-child(4)>i {
-    background-color: transparent;
+#slide-3:checked ~ .mem-1 {
+    transform: translateY(-200%);
 }
-#meme5:target ~.slider>.bullets>a:nth-child(5)>i {
-    background-color: transparent;
-}
-#meme6:target ~.slider>.bullets>a:nth-child(6)>i {
-    background-color: transparent;
-}
-#meme7:target ~.slider>.bullets>a:nth-child(7)>i {
-    background-color: transparent;
+#slide-4:checked ~ .mem-1 {
+    transform: translateY(-300%);
 }
