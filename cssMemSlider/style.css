@@ -6,21 +6,17 @@ body {
 }
 .all {
     display: flex;
-  justify-content: center;
-  align-items: center;
+    justify-content: center;
 }
- article {
+article {
   max-width: 120rem;
   width: 100%;
-  display: flex;
-  justify-content: center;
 }
 .slider {
   position: relative;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin-top: 5rem;
 }
 
@@ -152,7 +148,7 @@ label {
     #bullets-active label {
         margin-left: 0rem;
     }
-}  
+   
 @media screen and (max-width: 420px) {
   article {
     max-width: 26.5rem;
